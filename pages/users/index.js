@@ -1,7 +1,8 @@
+import User from "../../components/User/User";
 
 
 function UsersList({ users }) {
-  console.log(users);
+  // console.log(users);
   return (
     <>
       <h1>List of users</h1>
@@ -9,13 +10,7 @@ function UsersList({ users }) {
         {
           users.map(user => (
             <div key={user.id} style={{ textAlign: 'center', marginBottom: '50px' }}>
-              <h3>{user.name}</h3>
-              <div>
-                <p>Username: {user.username}</p>
-                <p>Email: {user.email}</p>
-                <p>Phone number: {user.phone}</p>
-                <p>Website: {user.website}</p>
-              </div>
+              <User user={user} />
             </div>
           ))
         }
