@@ -2,7 +2,6 @@ import Post from "../../components/Post/Post";
 
 
 function Posts({ posts }) {
-  console.log(posts)
   return (
     <>
       <h1>Posts page</h1>
@@ -23,7 +22,7 @@ export async function getStaticProps() {
   const data = await response.json()
   return {
     props: {
-      posts: data.slice(0, 3)
+      posts: data.slice(0, 10)
     }
   }
 }
