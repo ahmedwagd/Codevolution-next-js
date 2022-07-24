@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import Navbar from '../../components/Navbar/Navbar';
 
 function HousesList() {
   const router = useRouter();
@@ -6,6 +7,7 @@ function HousesList() {
   return (
     <div>
       <h1>HousesList page</h1>
+      <Navbar />
       <p></p>
     </div>
   )
