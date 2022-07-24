@@ -32,7 +32,7 @@ export async function getStaticProps(context) {
  * 3- In the background, Next.js will statically generated the requested path HTML and JSON. This includes running gestStaticProps.
  * 4- When that's done, the browser recevies the JSON for the generated path. This will be used to automatically render the page with the required props.
  *       From the user's prespective, the page will be sapped from the callback page to full page.
- *  5- At the same time, Next.js keeps track of the new list of pre-rendered pages. Subsequent request to the same path will serve the generated page,
+ * 5- At the same time, Next.js keeps track of the new list of pre-rendered pages. Subsequent request to the same path will serve the generated page,
  *        just like other pages pre-rendered at build time.
  * * When?
  * The true value is most suitable if your app has a very large number of static pages that depend on data
@@ -44,6 +44,7 @@ export async function getStaticProps(context) {
  *    From then onwards, everyone  who requests the same page  will get the statically pre-rendered page.
  * This ensures that the users always have a fast experience while  preserving fast build and benefits of Static Generation. 
  */
+
 export async function getStaticPaths() {
   const response = await fetch(`https://jsonplaceholder.typicode.com/users`);
   const data = await response.json();
