@@ -52,6 +52,7 @@ export async function getStaticProps(context) {
   return {
     props: {
       comment: data
-    }
+    },
+    revalidate: 10,
   }
 }
